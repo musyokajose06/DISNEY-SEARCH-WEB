@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+h2 {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;    
+}
+
+body {
+    background: url("https://images.unsplash.com/photo-1528041119984-da3a9f8d04d1?q=80&w=1409&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center fixed;
+    background-size: cover
+}
+
+header .navbar .title {
+      font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-size: 60px;
+  font-style: normal;
+}
+
+
+
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* .input-con {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center;
+/* } */ 
+
+.input-con .container {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-end; */
+    align-items: center;
+    /* border: 1px solid black;
+    border-radius: 10px; */
+    padding: 10px;
+    /* margin-left: 200px;
+    max-width: 1000px;
+    border-color: blue; */
+
+}
+
+input {
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 16px;
+    /* background-color: rgb(118, 113, 194); */
+    color: #000;
+    
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 16px;
+    background-color: rgb(118, 113, 194);
+    color: #000;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #000;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.character-card {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.character-card h3 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-size: 30px;
+    font-style: normal;
+}
+
+.character-card img {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 600px;
+    max-width: 100%;
+}
+
+.modal.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
