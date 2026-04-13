@@ -4,13 +4,16 @@ const searchButton = document.querySelector('.submit')
 const charactersGrid = document.querySelector('.characters-grid')
 
 // Fetching and Displaying Characters
-searchButton.addEventListener('click', async () => {
+searchButton.addEventListener('click', async (event) => {
+    event.preventDefault()
     const query = searchInput.value
     const url = `https://api.disneyapi.dev/character?name=${query}`
     try {
         const response = await fetch(url)
         const data = await response.json()
         displayCharacters(data.data)
+        // Local storage
+        localStorage.setItem('lastSearchResults', JSON.stringify(data.data))
     } catch (error) {
         console.error('Error fetching characters:', error)
     }
@@ -40,6 +43,7 @@ function displayCharacters(characters) {
 // Modal
 const modal = document.getElementById('modal')
 const modalButton = document.getElementById('modal-button')
+
 // An event listener to remove the modal
 modal.addEventListener('click', (event) => {
     if (event.target === modal) {
@@ -61,4 +65,10 @@ function modalContent(character) {
         <p>Allies: ${character.allies.join(', ')}</p>
         <p>Enemies: ${character.enemies.join(', ')}</p>
         `
+}
+
+// Check for saved results on page load
+const savedCharacters = localStorage.getItem('lastSearchResults')
+if (savedCharacters) {
+    displayCharacters(JSON.parse(savedCharacters))
 }
