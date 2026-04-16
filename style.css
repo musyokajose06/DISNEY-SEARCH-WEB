@@ -18,11 +18,11 @@ body {
 }
 
 header .navbar .title {
-      font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-size: 60px;
-  font-style: normal;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-size: 60px;
+    font-style: normal;
 }
 
 
@@ -35,24 +35,15 @@ header .navbar {
     padding: 10px;
 }
 
-/* .input-con {
-    display: flex;
-    /* justify-content: center; */
-    /* align-items: center;
-/* } */ 
+/* Where the content is */
 
 .input-con .container {
     margin: 10px;
     display: flex;
     flex-direction: column;
-    /* justify-content: flex-end; */
     align-items: center;
-    /* border: 1px solid black;
-    border-radius: 10px; */
     padding: 10px;
-    /* margin-left: 200px;
-    max-width: 1000px;
-    border-color: blue; */
+
 
 }
 
@@ -60,12 +51,14 @@ input {
     width: 300px;
     height: 40px;
     padding: 10px;
-    /* border: 1px solid black; */
+    border: 1px solid white;
     border-radius: 5px;
     margin: 10px;
     font-size: 16px;
-    /* background-color: rgb(118, 113, 194); */
     color: #000;
+    background-color: rgba(225, 225, 225, 0.2);
+    backdrop-filter: blur(5px);
+
     
 }
 
@@ -73,11 +66,12 @@ button {
     width: 100px;
     height: 40px;
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 5px;
     margin: 10px;
     font-size: 16px;
-    background-color: rgb(118, 113, 194);
+    background-color: rgba(225, 225, 225, 0.2);
+    backdrop-filter: blur(5px);
     color: #000;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
