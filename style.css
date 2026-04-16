@@ -83,6 +83,14 @@ button:hover {
     transform: scale(1.05);
 }
 
+.container .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
 .character-card {
     display: flex;
     flex-direction: column;
@@ -130,7 +138,25 @@ button:hover {
     text-align: center;
     width: 600px;
     max-width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.modal-content h3 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-size: 30px;
+    font-style: normal;
+}
+
+.modal-content p {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    margin: 5px 0;   
+}
+
 
 .modal.show {
     opacity: 1;

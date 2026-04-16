@@ -1,7 +1,16 @@
 // Accessing the DOM Elements
 const searchInput = document.getElementById('search-input')
 const searchButton = document.querySelector('.submit')
+const clearButton = document.querySelector('.clear')
 const charactersGrid = document.querySelector('.characters-grid')
+
+// Clear search results and reset UI
+clearButton.addEventListener('click', (event) => {
+    event.preventDefault()
+    searchInput.value = ''
+    charactersGrid.innerHTML = ''
+    localStorage.removeItem('lastSearchResults')
+})
 
 // Fetching and Displaying Characters
 searchButton.addEventListener('click', async (event) => {
